@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuietDNS 技术支持</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; max-width: 820px; margin: 40px auto; padding: 20px; line-height: 1.75; color: #333; }
+        h1 { color: #000; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        h2 { color: #111; margin-top: 30px; }
+        .tip { background: #f5f7fa; border-radius: 12px; padding: 14px 16px; }
+        .footer { margin-top: 40px; font-size: 0.8em; color: #999; border-top: 1px solid #eee; padding-top: 20px; }
+        a { color: #1769e0; }
+    </style>
+</head>
+<body>
+    <h1>QuietDNS 技术支持</h1>
+
+    <p>QuietDNS 是一款面向 iPhone、iPad 和 Mac 的本地 DNS 广告与追踪拦截工具。它使用 Apple Network Extension 在设备本地处理 DNS，不是提供远程节点的传统 VPN。</p>
+
+    <h2>常见问题</h2>
+
+    <p><strong>Q：QuietDNS 是 VPN 吗？</strong><br>
+    A：系统会显示本地 VPN 配置，这是 Apple Packet Tunnel 的工作方式。QuietDNS 没有远程 VPN 服务器，不改变公网 IP，也不代理全部网络流量，只处理 DNS 查询。</p>
+
+    <p><strong>Q：为什么开启后没有活动记录？</strong><br>
+    A：请确认“设置”中的“保留本地查询记录”已开启。macOS 或浏览器可能使用缓存、加密 DNS 或其他网络扩展。请暂时关闭 Shadowrocket、其他 VPN、DNS 代理和浏览器的安全 DNS 后再次测试。</p>
+
+    <p><strong>Q：为什么同时开启 Shadowrocket 后 QuietDNS 记录变少？</strong><br>
+    A：多个网络扩展可能争用 DNS 路由。Shadowrocket 的 DIRECT 规则只表示连接不经过代理节点，DNS 仍可能由 Shadowrocket 处理。测试 QuietDNS 时建议一次只启用一个 DNS/VPN 网络扩展。</p>
+
+    <p><strong>Q：为什么访问网页后仍然出现广告？</strong><br>
+    A：QuietDNS 进行的是域名级 DNS 拦截，不能隐藏已经加载的网页元素，也不能处理应用内硬编码的广告、第一方广告或未经过系统 DNS 的连接。请确认相关规则已启用并完成更新。</p>
+
+    <p><strong>Q：如何添加自己的规则？</strong><br>
+    A：进入“规则”，选择“黑名单”或“白名单”可编辑本地域名；选择“远程规则”可浏览内置目录；选择“第三方规则”可添加 HTTPS 订阅、导入文件或粘贴规则文本。</p>
+
+    <p><strong>Q：支持哪些规则格式？</strong><br>
+    A：支持 AdGuard DNS 规则、hosts、纯域名、Loon/Surge 的 DOMAIN 与 DOMAIN-SUFFIX，以及 YAML 域名列表。只有域名级规则会进入 DNS 索引。</p>
+
+    <p><strong>Q：DNS 请求会发送到哪里？</strong><br>
+    A：未命中拦截规则的查询会发送到“设置”中选择的上游 DNS。可选项包括自动选择、AliDNS、DNSPod Public DNS+、Cloudflare 和 AdGuard DNS。QuietDNS 不会把查询发送到开发者自己的日志服务器。</p>
+
+    <p><strong>Q：支持哪些系统？</strong><br>
+    A：iOS 15 及更高版本、iPadOS 15 及更高版本、macOS 11 及更高版本。</p>
+
+    <h2>排查建议</h2>
+    <div class="tip">
+        <ol>
+            <li>关闭其他 VPN、代理、DNS 配置和浏览器安全 DNS。</li>
+            <li>确认 QuietDNS 的本地防护状态为“已开启”。</li>
+            <li>确认“保留本地查询记录”已开启。</li>
+            <li>更新或重新编译已启用的规则。</li>
+            <li>重新访问一个尚未缓存的域名，再查看“活动”。</li>
+        </ol>
+    </div>
+
+    <h2>联系我们</h2>
+    <p>问题反馈和功能建议：</p>
+    <ul>
+        <li>邮件：<a href="mailto:report@epoxn.com">report@epoxn.com</a></li>
+        <li>反馈页面：<a href="https://feedback.epoxn.com/?p=quietdns">https://feedback.epoxn.com/?p=quietdns</a></li>
+    </ul>
+    <p>如果问题与规则匹配或 DNS 路由有关，请同时提供系统版本、QuietDNS 版本、是否开启其他 VPN，以及问题出现的时间。请不要发送包含个人信息的活动记录。</p>
+
+    <div class="footer">Copyright © 2026 Erico. All Rights Reserved.</div>
+</body>
+</html>
