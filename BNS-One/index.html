@@ -3,54 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>技术支持</title>
+    <meta name="description" content="BNS One 技术支持">
+    <title>BNS One 技术支持</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; line-height: 1.6; color: #333; }
-        h1 { color: #000; border-bottom: 1px solid #eee; padding-bottom: 10px; }
-        .footer { margin-top: 40px; font-size: 0.8em; color: #999; border-top: 1px solid #eee; padding-top: 20px; }
+        :root { color-scheme: light dark; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; line-height: 1.7; color: #333; background: #fff; }
+        h1 { color: #000; border-bottom: 1px solid #e9e9eb; padding-bottom: 10px; letter-spacing: -0.02em; }
+        h2 { color: #111; margin-top: 1.8em; font-size: 1.22em; }
+        h3 { color: #222; font-size: 1em; margin-bottom: 0.25em; }
+        .answer { margin-top: 0; }
+        .footer { margin-top: 40px; font-size: 0.8em; color: #888; border-top: 1px solid #e9e9eb; padding-top: 20px; }
+        a { color: #0a66d5; }
+        @media (prefers-color-scheme: dark) {
+            body { color: #e8e8ed; background: #000; }
+            h1, h2, h3 { color: #fff; border-color: #363638; }
+            .footer { color: #9a9aa1; border-color: #363638; }
+        }
     </style>
 </head>
 <body>
-
     <h1>技术支持</h1>
-
-    <p>感谢您使用“Cabinet智能储物柜”（以下简称“本应用”）。</p>
+    <p>感谢你使用 BNS One。BNS One 帮助你查看课表、成长报告、课程班与校园服务，并提供本地离线查看和课程提醒功能。</p>
 
     <h2>常见问题</h2>
 
-    <p><strong>Q：本应用是否需要联网使用？</strong><br>
-    A：本应用支持局域网内网部署，建议在 Wi-Fi 或校园网络环境下使用，以获得最佳体验。</p>
+    <h3>需要登录才能使用吗？</h3>
+    <p class="answer">不需要。你可以选择忽略登录并以访客模式进入应用；访客模式仅展示应用界面，不会加载个人课表、成长报告或校园数据。登录后，应用才能从学校服务同步你的信息。</p>
 
-    <p><strong>Q：支持哪些设备？</strong><br>
-    A：本应用支持 iPhone、iPad、Apple Watch 以及 Vision Pro，覆盖 iOS、watchOS 和 visionOS 全平台。</p>
+    <h3>离线时还能看数据吗？</h3>
+    <p class="answer">可以。已经同步过的课表、课程班和成长报告数据会保存在本机。离线状态下可继续查看已保存的学期与学段；尚未同步过的内容会提示暂时没有可用数据。</p>
 
-    <p><strong>Q：Face ID 验证失败怎么办？</strong><br>
-    A：请检查系统设置中是否已开启 Face ID 权限。若仍无法使用，可使用设备密码验证方式。</p>
+    <h3>为什么切换学期或学段后需要同步？</h3>
+    <p class="answer">每个学期和学段的数据独立保存。首次进入某个学期或学段时，应用需要联网获取并保存该分区的数据；之后即使离线，也可以继续查看已经保存的内容。</p>
 
-    <p><strong>Q：锁屏小组件和控制中心小组件如何使用？</strong><br>
-    A：在 iOS 18 及以上系统中，您可以在锁屏界面或控制中心添加本应用的小组件，实现一键快捷操作。</p>
+    <h3>课程提醒在哪里开启？</h3>
+    <p class="answer">前往“设置 → 通知设置”开启课程、待办、考勤或评估提醒。你可以设置提前提醒时间，也可以选择哪些评估等级需要提醒。强提醒功能需要在系统中单独允许。</p>
 
-    <p><strong>Q：数据存储在哪里？是否安全？</strong><br>
-    A：本应用不收集任何用户个人数据。所有储物记录和状态信息仅存储在您指定的内部服务器或本地设备中。</p>
+    <h3>为什么提醒没有出现？</h3>
+    <p class="answer">请检查系统“设置 → 通知 → BNS One”是否已允许通知，并确认应用内对应提醒开关已开启。强提醒还需要系统授予相应权限。</p>
+
+    <h3>课表、考勤或成长报告与学校页面不一致怎么办？</h3>
+    <p class="answer">请确认网络可用后，点击首页右上角的同步按钮，或在对应页面下拉刷新。学校服务的数据更新可能存在短暂延迟；若刷新后仍不一致，请通过反馈入口告知我们。</p>
+
+    <h3>退出登录会发生什么？</h3>
+    <p class="answer">退出登录会清除当前账户保存在本机的登录凭据与校园数据。若只是暂时离线或账号在其他设备登录，请不要退出登录；已保存的本地数据仍可用于离线查看。</p>
+
+    <h3>支持哪些设备？</h3>
+    <p class="answer">BNS One 支持 iPhone、iPad，并通过 Mac Catalyst 支持 Mac。不同设备会根据屏幕大小自动调整课表与课程班布局。</p>
 
     <h2>联系我们</h2>
+    <p>遇到问题、想提出建议或合作想法时，你可以在应用内前往“设置 → 关于 → 反馈”，选择在线反馈或邮件反馈；也可直接发送邮件至 <a href="mailto:report@epoxn.com">report@epoxn.com</a>。</p>
+    <p>反馈时如能附上问题出现的时间、操作步骤和截图，会更容易定位问题。</p>
 
-    <p>如果您在使用过程中遇到任何问题，或有任何建议与反馈，欢迎通过以下方式联系我们：</p>
+    <h2>保持更新</h2>
+    <p>BNS One 会持续优化课表、离线数据、通知和多设备布局体验。建议保持应用为最新版本，以获得新的功能与问题修复。</p>
 
-    <ul>
-        <li>发送邮件至：<strong>erico525@163.com</strong></li>
-        <li>通过 App Store 的“开发者网站”或“支持网址”入口提交反馈</li>
-    </ul>
-
-    <p>我们会在 1-2 个工作日内回复您的邮件。</p>
-
-    <h2>版本更新</h2>
-
-    <p>本应用持续优化中，欢迎保持应用更新以获取最新功能和体验改进。</p>
-
-    <div class="footer">
-        Copyright © 2026 Erico. All Rights Reserved.
-    </div>
-
+    <div class="footer">Copyright © 2026 Erico. All Rights Reserved.</div>
 </body>
 </html>
